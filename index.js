@@ -9,7 +9,16 @@ app.set('view engine','ejs');
 
 // Create route for the root
 app.get('/',function(req,res){
-   res.render("index",cafeData);
+   res.render("index",{
+       pageId:'home'
+   });
+});
+
+// Create route for cafes page
+app.get('/cafes',function(req,res){
+   res.render("index",{
+       pageId:'cafes'
+       cafeData:cafeData});
 });
 
 app.listen(3000,function(req,res){
