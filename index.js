@@ -17,13 +17,12 @@ app.get('/',function(req,res){
 // Create route for cafes page
 app.get('/cafes',function(req,res){
    res.render("index",{
-       pageId:'cafes'
+       pageId:'cafes',
        cafeData:cafeData});
 });
 
 app.listen(3000,function(req,res){
     console.log('Listening at port 3000');
-    console.log(cafeData);
 })
 
 

@@ -12,7 +12,11 @@
     </header>
 
     <section>
+        <%if(pageId==='home'){%>
         <%include partials/content/landingPage.ejs%>
+        <%}else{%>
+        <%include partials/content/cafes.ejs%>
+        <%}%>
 
     </section>
     <%include partials/templates/defaultjs.ejs%>
