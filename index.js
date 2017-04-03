@@ -5,10 +5,11 @@ var cafeData = require('./data/cafes.json');
 
 
 app.use(express.static('public'));
+app.set('view engine','ejs');
 
 // Create route for the root
 app.get('/',function(req,res){
-   res.sendFile(path.join(__dirname + "/public/index.html"));
+   res.render("index");
 });
 
 app.listen(3000,function(req,res){
