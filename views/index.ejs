@@ -54,91 +54,24 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="thumbnail ">
-                        <img id="center-cropped" src="https://source.unsplash.com/O50HtSlCzag/" alt="...">
-                        <span class="rating">4.0</span>
-                        <div class="caption">
-                            <h3>Hipster Emporium</h3>
-                            <p>Richmond</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 6.2 Km</p>
-                        </div>
-                    </div>
-                </div>
 
 
-                <div class="col-sm-6 col-md-4">
+                <%cafes.forEach(function(item,index){%>
+
+                <div class=<%if(index>0){%>"col-sm-6 col-md-4"<%}%>>
                     <div class="thumbnail">
-                        <img src="<%=cafes[1].photo%>" alt="...">
-                        <span class="rating"><%=cafes[1].rating%></span>
+                        <img <%if(index==0){%>id="center-cropped" <%}%> src="<%=item.photo%>" alt="...">
+                        <span class="rating"><%=item.rating%></span>
                         <div class="caption">
-                            <h3><%=cafes[1].name%></h3>
-                            <p><%=cafes[1].address%></p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%=cafes[1].distance%></p>
+                            <h3><%=item.name%></h3>
+                            <p><%=item.address%></p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%=item.distance%></p>
                         </div>
                     </div>
                 </div>
+                <%});%>
 
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://source.unsplash.com/g-erOiuDxro/350x233" alt="...">
-                        <span class="rating">4.3</span>
-                        <div class="caption">
-                            <h3>The Naked Barista</h3>
-                            <p>Collingwood</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 2.7 km</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://source.unsplash.com/BonjBu19IiY/350x233" alt="...">
-                        <span class="rating">3.2</span>
-                        <div class="caption">
-                            <h3>The Coffee Cobbler</h3>
-                            <p>Melbourne CBD</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 2.2 km</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://source.unsplash.com/xoBg77epln0/350x233" alt="...">
-                        <span class="rating">3.9</span>
-                        <div class="caption">
-                            <h3>Kofsmanship</h3>
-                            <p>Toorak</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 9.3 km</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://source.unsplash.com/94taEmdowRw/350x233" alt="...">
-                        <span class="rating">4.6</span>
-                        <div class="caption">
-                            <h3>Before it Becomes Cool</h3>
-                            <p>Carlton</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 650 m</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://source.unsplash.com/4qJdtfJ2MmQ/350x233" alt="...">
-                        <span class="rating">2.4</span>
-                        <div class="caption">
-                            <h3>Kawa</h3>
-                            <p>Fitzroy</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 1.9Km</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
