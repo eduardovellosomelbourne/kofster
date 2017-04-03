@@ -4,7 +4,7 @@
   "description": "Web app that connects hipsters to ironic coffee shops",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"nodemon -e css,ejs,js,json index.js"
   },
   "author": "Eduardo Velloso",
   "license": "ISC",
